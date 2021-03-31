@@ -1,7 +1,6 @@
 require 'rspec'
 require './lib/dish'
 require './lib/potluck'
-require 'pry'
 
 RSpec.describe Potluck do
   describe '#initialize' do
@@ -29,7 +28,6 @@ RSpec.describe Potluck do
       potluck.add_dish(cocktail_meatballs)
 
       expect(potluck.dishes).to eq([couscous_salad, cocktail_meatballs])
-      binding.pry
     end
     it 'counts dishes' do
       potluck = Potluck.new("7-13-18")
